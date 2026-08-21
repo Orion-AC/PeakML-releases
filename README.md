@@ -39,25 +39,39 @@ means Intel.
 
 These builds are **not code-signed yet**, so both systems will warn you the
 first time. The warning is about the absence of a paid certificate, not about
-anything found in the app.
+anything found in the app — macOS has not inspected PeakML and found something,
+it has simply declined to check an app whose developer has not paid for a
+certificate.
 
 ### macOS
 
 Open the `.dmg` and drag PeakML to Applications. Then, the first time only:
 
-1. Open Applications in Finder.
-2. **Right-click** PeakML and choose **Open** — double-clicking will not work
-   yet, and will offer only *Move to Trash*.
-3. Click **Open** in the dialog.
+1. Double-click PeakML. macOS says *"Apple could not verify PeakML is free of
+   malware…"* — click **Done**. This step is required: the button you need
+   next does not appear until macOS has blocked the app once.
+2. Open **System Settings ▸ Privacy & Security** and scroll down to
+   **Security**. There is a line reading *"PeakML was blocked to protect your
+   Mac."*
+3. Click **Open Anyway**, authenticate, and confirm **Open Anyway** again.
 
 macOS remembers the choice; afterwards it launches normally.
 
-If you see *"PeakML is damaged and can't be opened"*, macOS has quarantined the
-download. Clear the flag:
+> **On macOS 14 Sonoma and earlier** you can instead right-click PeakML and
+> choose **Open**. That shortcut was removed in macOS 15 Sequoia, so on
+> Sequoia, Tahoe and later the System Settings route above is the only one
+> through the graphical interface.
+
+Prefer the terminal? One command does the same thing on every version, and can
+be run before the first launch:
 
 ```sh
-xattr -d com.apple.quarantine /Applications/PeakML.app
+xattr -dr com.apple.quarantine /Applications/PeakML.app
 ```
+
+That removes the quarantine flag Safari or Chrome attached to the download. It
+is also the fix if macOS claims the app is *"damaged and can't be opened"* —
+that message means the same thing, not that the file is corrupt.
 
 ### Windows
 
