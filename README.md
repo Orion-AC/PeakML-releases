@@ -12,13 +12,13 @@ offers is deterministic profiling.
 
 ---
 
-## Download 0.1.0
+## Download 0.2.1
 
 | Platform | File |
 | --- | --- |
-| **macOS** — Apple Silicon (M1 and later) | [`PeakML-0.1.0-mac-arm64.dmg`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.1.0/PeakML-0.1.0-mac-arm64.dmg) |
-| **macOS** — Intel | [`PeakML-0.1.0-mac-x64.dmg`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.1.0/PeakML-0.1.0-mac-x64.dmg) |
-| **Windows** — x64 | [`PeakML-0.1.0-win-x64.exe`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.1.0/PeakML-0.1.0-win-x64.exe) |
+| **macOS** — Apple Silicon (M1 and later) | [`PeakML-0.2.1-mac-arm64.dmg`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.2.1/PeakML-0.2.1-mac-arm64.dmg) |
+| **macOS** — Intel | [`PeakML-0.2.1-mac-x64.dmg`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.2.1/PeakML-0.2.1-mac-x64.dmg) |
+| **Windows** — x64 | [`PeakML-0.2.1-win-x64.exe`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.2.1/PeakML-0.2.1-win-x64.exe) |
 
 **[All releases →](https://github.com/Orion-AC/PeakML-releases/releases)**
 
@@ -89,7 +89,7 @@ Checksums for every file are attached to each release as `SHA256SUMS.txt`.
 shasum -a 256 -c SHA256SUMS.txt
 
 # Windows PowerShell
-Get-FileHash .\PeakML-0.1.0-win-x64.exe -Algorithm SHA256
+Get-FileHash .\PeakML-0.2.1-win-x64.exe -Algorithm SHA256
 ```
 
 ---
