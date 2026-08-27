@@ -12,11 +12,11 @@ offers is deterministic profiling.
 
 ---
 
-## Download 0.2.2
+## Download 0.2.3
 
 | Platform | File |
 | --- | --- |
-| **Windows** — x64 | [`PeakML-0.2.2-win-x64.exe`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.2.2/PeakML-0.2.2-win-x64.exe) |
+| **Windows** — x64 | [`PeakML-0.2.3-win-x64.exe`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.2.3/PeakML-0.2.3-win-x64.exe) |
 
 **[All releases →](https://github.com/Orion-AC/PeakML-releases/releases)**
 
@@ -38,7 +38,7 @@ Not sure which Mac you have? Click the Apple menu ▸ **About This Mac**. A chip
 named *Apple M1*, *M2*, *M3* or *M4* means Apple Silicon; one named *Intel*
 means Intel.
 
-Those are **0.2.1**, so they do not carry the 0.2.2 fixes. Those fixes were all
+Those are **0.2.1**, so they carry neither the 0.2.2 nor the 0.2.3 fixes. Those fixes were all
 Windows-specific — a launch that stopped at the splash screen, a slow engine
 start, and the window controls overlapping — and only the second of them
 affected macOS at all.
@@ -106,7 +106,7 @@ Checksums for every file are attached to each release as `SHA256SUMS.txt`.
 shasum -a 256 -c SHA256SUMS.txt
 
 # Windows PowerShell
-Get-FileHash .\PeakML-0.2.2-win-x64.exe -Algorithm SHA256
+Get-FileHash .\PeakML-0.2.3-win-x64.exe -Algorithm SHA256
 ```
 
 ---
