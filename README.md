@@ -12,19 +12,36 @@ offers is deterministic profiling.
 
 ---
 
-## Download 0.2.1
+## Download 0.2.2
+
+| Platform | File |
+| --- | --- |
+| **Windows** — x64 | [`PeakML-0.2.2-win-x64.exe`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.2.2/PeakML-0.2.2-win-x64.exe) |
+
+**[All releases →](https://github.com/Orion-AC/PeakML-releases/releases)**
+
+### macOS
+
+**PeakML is not currently published for macOS.** It is not code-signed, and an
+unsigned app is now blocked on arrival rather than merely warned about — so the
+build was one almost nobody could get running. macOS returns with a Developer ID
+certificate.
+
+**0.2.1** is the last release with macOS builds, and they still work:
 
 | Platform | File |
 | --- | --- |
 | **macOS** — Apple Silicon (M1 and later) | [`PeakML-0.2.1-mac-arm64.dmg`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.2.1/PeakML-0.2.1-mac-arm64.dmg) |
 | **macOS** — Intel | [`PeakML-0.2.1-mac-x64.dmg`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.2.1/PeakML-0.2.1-mac-x64.dmg) |
-| **Windows** — x64 | [`PeakML-0.2.1-win-x64.exe`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.2.1/PeakML-0.2.1-win-x64.exe) |
-
-**[All releases →](https://github.com/Orion-AC/PeakML-releases/releases)**
 
 Not sure which Mac you have? Click the Apple menu ▸ **About This Mac**. A chip
 named *Apple M1*, *M2*, *M3* or *M4* means Apple Silicon; one named *Intel*
 means Intel.
+
+Those are **0.2.1**, so they do not carry the 0.2.2 fixes. Those fixes were all
+Windows-specific — a launch that stopped at the splash screen, a slow engine
+start, and the window controls overlapping — and only the second of them
+affected macOS at all.
 
 ### Requirements
 
@@ -89,7 +106,7 @@ Checksums for every file are attached to each release as `SHA256SUMS.txt`.
 shasum -a 256 -c SHA256SUMS.txt
 
 # Windows PowerShell
-Get-FileHash .\PeakML-0.2.1-win-x64.exe -Algorithm SHA256
+Get-FileHash .\PeakML-0.2.2-win-x64.exe -Algorithm SHA256
 ```
 
 ---
