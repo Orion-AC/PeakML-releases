@@ -38,10 +38,11 @@ Not sure which Mac you have? Click the Apple menu ▸ **About This Mac**. A chip
 named *Apple M1*, *M2*, *M3* or *M4* means Apple Silicon; one named *Intel*
 means Intel.
 
-Those are **0.2.1**, so they carry neither the 0.2.2 nor the 0.2.3 fixes. Those fixes were all
-Windows-specific — a launch that stopped at the splash screen, a slow engine
-start, and the window controls overlapping — and only the second of them
-affected macOS at all.
+Those are **0.2.1**, so they carry neither the 0.2.2 nor the 0.2.3 fixes.
+0.2.2 was Windows-specific — a launch that stopped at the splash screen and
+window controls drawn over the app's own. 0.2.3 was not: it made working with
+large files several times faster on every platform, and macOS would have
+benefited from it equally.
 
 ### Requirements
 
