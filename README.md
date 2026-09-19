@@ -1,22 +1,25 @@
 # PeakML
 
-A local-first desktop app for preparing data. Open a file — or a folder of
-documents — change it by clicking and typing, and every change lands in a
-visible recipe of steps. Save the recipe, version it, point it at next month's
-export, and take it away as runnable Python.
+A desktop app for preparing data. Open a file — or a folder of documents —
+change it by clicking and typing, and every change lands in a visible recipe of
+steps. Save the recipe, version it, point it at next month's export, and take it
+away as runnable Python.
 
-No network calls. No telemetry. No model in the product — the judgement it
-offers is deterministic profiling.
+Since 0.4.0 it also builds **training data**: a folder of PDFs and Word files to
+a train/eval split in the formats a fine-tuning run reads, split by source
+document so nothing leaks between the two.
+
+No model in the product — the judgement it offers is deterministic profiling.
 
 **This repository holds downloads only.** PeakML's source is not public.
 
 ---
 
-## Download 0.3.0
+## Download 0.4.0
 
 | Platform | File |
 | --- | --- |
-| **Windows** — x64 | [`PeakML-0.3.0-win-x64.exe`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.3.0/PeakML-0.3.0-win-x64.exe) |
+| **Windows** — x64 | [`PeakML-0.4.0-win-x64.exe`](https://github.com/Orion-AC/PeakML-releases/releases/download/v0.4.0/PeakML-0.4.0-win-x64.exe) |
 
 **[All releases →](https://github.com/Orion-AC/PeakML-releases/releases)**
 
@@ -38,7 +41,8 @@ Not sure which Mac you have? Click the Apple menu ▸ **About This Mac**. A chip
 named *Apple M1*, *M2*, *M3* or *M4* means Apple Silicon; one named *Intel*
 means Intel.
 
-Those are **0.2.1**, so they are three releases behind and carry none of the 0.2.2, 0.2.3 or 0.3.0 work.
+Those are **0.2.1**, so they are four releases behind and carry none of the
+0.2.2, 0.2.3, 0.3.0 or 0.4.0 work.
 0.2.2 was Windows-specific — a launch that stopped at the splash screen and
 window controls drawn over the app's own. 0.2.3 was not: it made working with
 large files several times faster on every platform, and macOS would have
@@ -107,7 +111,7 @@ Checksums for every file are attached to each release as `SHA256SUMS.txt`.
 shasum -a 256 -c SHA256SUMS.txt
 
 # Windows PowerShell
-Get-FileHash .\PeakML-0.3.0-win-x64.exe -Algorithm SHA256
+Get-FileHash .\PeakML-0.4.0-win-x64.exe -Algorithm SHA256
 ```
 
 ---
@@ -115,7 +119,7 @@ Get-FileHash .\PeakML-0.3.0-win-x64.exe -Algorithm SHA256
 ## What PeakML does
 
 **Every mutation becomes a recorded step.** Typed cells, pastes, fills, row and
-column deletes, sorts, filters, replaces, and all 46 statistical transforms land
+column deletes, sorts, filters, replaces, and every one of the 51 operations land
 in the Applied Steps panel. The grid is always recomputed from the original file
 through the ordered steps, so nothing changes invisibly and everything is
 reversible.
@@ -129,6 +133,10 @@ reversible.
 - **The recipe outlives the file.** It is a document with an id, a version, a
   history and a diff, and it can be pointed at data it was never written on.
 - **Recipes export as runnable Python.**
+- **It builds training data.** JSONL in the shapes a fine-tuning run reads,
+  chunking by tokens, near-duplicate removal, quality filters, personal-data
+  redaction, and a train/eval split by source document. The exported Python
+  rebuilds the same files, byte for byte.
 
 ### What PeakML is not
 
